@@ -1,0 +1,21 @@
+
+/generated/prisma
+
+
+# Dependencies
+node_modules/
+
+# Environment variables (Sensitive Data)
+.env
+.env*.local
+
+# Editor / IDE settings
+.vscode/
+
+# Prisma Generated Client
+/prisma/generated/
+/generated/prisma
+
+# Logs & System files
+*.log
+.DS_Store
