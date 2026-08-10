@@ -12,14 +12,17 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@prisma/adapter-pg": "^7.9.1",
     "@prisma/client": "^7.9.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
   },
   "allowScripts": {
     "@prisma/engines@7.9.1": true,
     "prisma@7.9.1": true
   },
   "devDependencies": {
+    "@types/pg": "^8.21.0",
     "prisma": "^7.9.1"
   }
 }

@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import prisma from "./src/config/db.js";
 
@@ -6,6 +7,7 @@ const app = express();
 const PORT = 5000;
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   res.json({
@@ -17,7 +19,7 @@ app.get("/", (req, res) => {
 
 app.post("/api/v1/users", async (req, res) => {
   try {
-    const { name, email } = req.body;
+    const { name, email } = req.body || {};
 
     if (!name || !email) {
       return res.status(400).json({
